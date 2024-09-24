@@ -19,7 +19,7 @@ RUN apt-get install -y \
 WORKDIR /opt/sqlite
 
 # Копируем исходные файлы SQLite в контейнер
-COPY ./data /opt/sqlite
+COPY ./sqlite /opt/sqlite
 
 # Собираем библиотеку SQLite как shared library (.so)
 RUN cmake . && make
